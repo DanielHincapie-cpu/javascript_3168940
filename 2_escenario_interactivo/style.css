@@ -1,0 +1,63 @@
+.page {
+
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.scene-wrapper {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.scene {
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.scene-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.asset {
+    margin-bottom: 10px;
+}
+
+.asset-clickable {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.asset-hover {
+    transform: scale(1.05);
+}
+
+.asset-selected {
+    border: 2px solid #007BFF;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slow-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
