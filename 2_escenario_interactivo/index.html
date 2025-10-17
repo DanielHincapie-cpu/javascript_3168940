@@ -1,45 +1,32 @@
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Juego simple</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="assets/">
 </head>
 <body>
-    <div class="scene-wrapper">
-        <div class="scene" id="scene" aria-label="Escenario Interactivo" role="application">
-            <div class="scene-header header"></div>
-            <img src="corazon.png" alt="corazon" class="heart" id="heart">
-            <img src="rueda.png" alt="rueda" class="wheel" id="wheel">
-            <img src="primer-nivel-super-mario-bros.jpg" alt=" primer nivel super mario bros" class="mario" id="mario">
 
-            <div class="info-panel info" id="infoPanel">
+<div class="game" id="g">
+<img class="bg" src="assets/mafi.jpg" alt="fondo del juego">
 
-        <div class="info-title">Haz clic en un asset</div>
-
-        <div class="info-text" id="infoText">Estado: esperando interacción...</div>
-
-        <div class="info-controls">
-
-          <span class="btn-reset" id="resetBtn">Reiniciar selección</span>
-
-        </div>
-
-      </div>
-
-
-
-    </div>
-
-
-
-    <div class="legend legend-text"></div>
-</div>
-</div>
+<div class="hud" role="region" aria-label="marcador">
+<div class="score" id="score">Puntos: 0</div>
+<div class="btn" id="reset">Reiniciar</div>
 </div>
 
+<img class="a1" src="assets/luciernaga.png" alt="elemento animado 1">
+<img class="a2" src="assets/mariposa-monarca.png" alt="elemento animado 2">
 
+<img class="c c1" src="assets/ardilla (1).png" alt="objetivo 1" data-points="10">
+<img class="c c2" src="assets/buho.png" alt="objetivo 2" data-points="15">
+<img class="c c3" src="assets/zorro.png" alt="objetivo 3" data-points="20">
+<img class="c c4" src="assets/hongo.png" alt="objetivo 4" data-points="25">
 
+<div class="msg" id="msg">¡Buen trabajo! Puntos totales: <span id="final">0</span></div>
+</div>
 
 
 <script src="app.js"></script>
