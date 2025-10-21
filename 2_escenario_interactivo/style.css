@@ -52,7 +52,7 @@ height: auto;
 pointer-events: none; 
 }
 
-@keyframes slideX {
+/* @keyframes slideX {
 0% { left: -140px; transform: translateY(0) scale(1); }
 50% { left: calc(100% - 120px); transform: translateY(-18px) scale(1.03); }
 100% { left: -140px; transform: translateY(0) scale(1); }
@@ -65,7 +65,7 @@ pointer-events: none;
 100% { top: 300px; transform: translateY(0) rotate(0deg); }
 }
 .a2 { left: 560px; width: 100px; animation: floatY 4.5s ease-in-out infinite; }
-
+ */
 .c {
 position: absolute;
 width: 90px;
@@ -93,7 +93,8 @@ transition: transform 250ms cubic-bezier(.2,.9,.3,1), opacity 250ms;
 position: absolute;
 left: 50%;
 top: 50%;
-transform: translate(-50%,-50%);
+/*  transform: translate(-50%,-50%);
+*/
 z-index: 20;
 background: rgba(0,0,0,0.6);
 color: #fff;
@@ -103,3 +104,40 @@ display: none;
 text-align: center;
 }
 .msg.show { display: block; }
+
+/* Animacion desaparece animales */
+
+.salto {
+animation: salto 0.5s ease forwards;
+}
+
+@keyframes salto {
+0% { transform: translateY(0); opacity: 1; }
+30% { transform: translateY(-60px);} 
+100% { transform: translateY(0); opacity: 0; }
+}
+
+.a2 {
+animation: movermariposa 1s linear infinite alternate;
+}
+@keyframes movermariposa {
+    0% { 
+        transform: translateX(100px);
+    }
+    100% { 
+        transform: translateX(-10px);
+    }
+ }
+
+ .a1 {
+animation: moverluciernaga 3s linear infinite alternate;
+}
+
+ @keyframes moverluciernaga {
+    0% { 
+        transform: translateY(0px);
+    }
+    100% { 
+        transform: translateY(300px);
+    }
+ }
