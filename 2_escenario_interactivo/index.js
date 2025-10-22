@@ -21,5 +21,5 @@ jell.forEach( item => {
 
 reset.addEventListener('click', () => { 
     counter = 0
-    score.textContent = `Reiniciar: ${counter}` 
+    score.textContent = `Puntos: ${counter}` 
      });
