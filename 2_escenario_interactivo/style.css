@@ -93,8 +93,7 @@ transition: transform 250ms cubic-bezier(.2,.9,.3,1), opacity 250ms;
 position: absolute;
 left: 50%;
 top: 50%;
-/*  transform: translate(-50%,-50%);
-*/
+
 z-index: 20;
 background: rgba(0,0,0,0.6);
 color: #fff;
@@ -105,7 +104,6 @@ text-align: center;
 }
 .msg.show { display: block; }
 
-/* Animacion desaparece animales */
 
 .salto {
 animation: salto 0.5s ease forwards;
@@ -219,3 +217,118 @@ transform: scale(1.15) rotate(-6deg);
 opacity: 0.6;
 transition: transform 250ms cubic-bezier(.2,.9,.3,1), opacity 250ms;
 }
+
+/* Tercer Escenario */
+
+.game3 {
+    width: 750px;
+    height: 500px;
+    position: relative; 
+    overflow: hidden;
+    border: 2px solid #222;
+    font-family: system-ui, sans-serif;
+    user-select: none;
+    background: #000;
+    }
+
+.fondo { 
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    }
+
+.marcador {
+    position: absolute;
+top: 8px;
+left: 8px;
+z-index: 10;
+display: flex;
+gap: 8px;
+align-items: center;
+color: #fff;
+text-shadow: 0 1px 0 #000;
+ }
+
+ .puntos {
+    padding: 6px 10px;
+        background: rgba(0,0,0,0.5);
+        border-radius: 6px;
+        font-weight: 600;
+ }
+
+.resetiar {
+       padding: 6px 10px;
+background: rgba(255,255,255,0.12);
+color: #fff;
+border-radius: 6px;
+cursor: pointer;
+border: 1px solid rgba(255,255,255,0.15);
+}
+
+.f1, .f2 {
+position: absolute;
+z-index: 5;
+width: 120px;
+height: auto;
+pointer-events: none; 
+}
+
+.j {
+position: absolute;
+width: 90px;
+height: auto;
+z-index: 8;
+cursor: pointer;
+transition: transform 150ms ease, opacity 200ms ease;
+border-radius: 8px;
+box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+.j:active { transform: scale(0.92); }
+
+.j3 { top: 120px; left: 40px; }
+.j4 { bottom: 40px; left: 90px; }
+.j5 { top: 40px; right: 90px; }
+.j6 { bottom: 80px; right: 40px; }
+
+.hit {
+transform: scale(1.15) rotate(-6deg);
+opacity: 0.6;
+transition: transform 250ms cubic-bezier(.2,.9,.3,1), opacity 250ms;
+}
+.salto {
+animation: salto 0.5s ease forwards;
+}
+
+@keyframes salto {
+0% { transform: translateY(0); opacity: 1; }
+30% { transform: translateY(-60px);} 
+100% { transform: translateY(0); opacity: 0; }
+}
+
+.f2 {
+animation: movermariposa 1s linear infinite alternate;
+}
+@keyframes movermariposa {
+    0% { 
+        transform: translateX(100px);
+    }
+    100% { 
+        transform: translateX(-10px);
+    }
+ }
+
+ .f1 {
+animation: moverluciernaga 3s linear infinite alternate;
+}
+
+ @keyframes moverluciernaga {
+    0% { 
+        transform: translateY(0px);
+    }
+    100% { 
+        transform: translateY(300px);
+    }
+ }
