@@ -30,10 +30,10 @@ color: #fff;
 text-shadow: 0 1px 0 #000;
 }
 .score {
-padding: 6px 10px;
-background: rgba(0,0,0,0.5);
-border-radius: 6px;
-font-weight: 600;
+    padding: 6px 10px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 6px;
+    font-weight: 600;
 }
 .btn {
 padding: 6px 10px;
@@ -52,7 +52,7 @@ height: auto;
 pointer-events: none; 
 }
 
-/* @keyframes slideX {
+ @keyframes slideX {
 0% { left: -140px; transform: translateY(0) scale(1); }
 50% { left: calc(100% - 120px); transform: translateY(-18px) scale(1.03); }
 100% { left: -140px; transform: translateY(0) scale(1); }
@@ -65,7 +65,7 @@ pointer-events: none;
 100% { top: 300px; transform: translateY(0) rotate(0deg); }
 }
 .a2 { left: 560px; width: 100px; animation: floatY 4.5s ease-in-out infinite; }
- */
+ 
 .c {
 position: absolute;
 width: 90px;
@@ -173,20 +173,23 @@ color: #fff;
 text-shadow: 0 1px 0 #000;
     }
 
-    .puntaje { 
-        padding: 6px 10px;
-        background: rgba(0,0,0,0.5);
-        border-radius: 6px;
-        font-weight: 600;
-    }
+.Puntaje { 
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    font-weight: 600;
+}
+
     .boton {
    padding: 6px 10px;
 background: rgba(255,255,255,0.12);
-color: #fff;
+color: #f8f8f8;
 border-radius: 6px;
 cursor: pointer;
 border: 1px solid rgba(255,255,255,0.15);
     }
+
+
 .v1, .v2 {
 position: absolute;
 z-index: 5;
@@ -218,6 +221,41 @@ opacity: 0.6;
 transition: transform 250ms cubic-bezier(.2,.9,.3,1), opacity 250ms;
 }
 
+.saltar {
+animation: salto 0.5s ease forwards;
+}
+
+@keyframes salto {
+0% { transform: translateY(0); opacity: 1; }
+30% { transform: translateY(-60px);} 
+100% { transform: translateY(0); opacity: 0; }
+}
+
+.v2 {
+animation: moverarbitro 1s linear infinite alternate;
+}
+@keyframes moverarbitro {
+    0% { 
+        transform: translateX(100px);
+    }
+    100% { 
+        transform: translateX(-10px);
+    }
+ }
+
+ .v1 {
+animation: moverbalon 3s linear infinite alternate;
+}
+
+ @keyframes moverbalon {
+    0% { 
+        transform: translateY(0px);
+    }
+    100% { 
+        transform: translateY(300px);
+    }
+ }
+
 /* Tercer Escenario */
 
 .game3 {
@@ -242,25 +280,25 @@ transition: transform 250ms cubic-bezier(.2,.9,.3,1), opacity 250ms;
 
 .marcador {
     position: absolute;
-top: 8px;
-left: 8px;
-z-index: 10;
-display: flex;
-gap: 8px;
-align-items: center;
-color: #fff;
-text-shadow: 0 1px 0 #000;
+    top: 8px;
+    left: 8px;
+    z-index: 10;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
  }
 
- .puntos {
+ .points {
     padding: 6px 10px;
         background: rgba(0,0,0,0.5);
         border-radius: 6px;
         font-weight: 600;
  }
 
-.resetiar {
-       padding: 6px 10px;
+.Boton { 
+   padding: 6px 10px;
 background: rgba(255,255,255,0.12);
 color: #fff;
 border-radius: 6px;
@@ -298,7 +336,8 @@ transform: scale(1.15) rotate(-6deg);
 opacity: 0.6;
 transition: transform 250ms cubic-bezier(.2,.9,.3,1), opacity 250ms;
 }
-.salto {
+
+.saltote {
 animation: salto 0.5s ease forwards;
 }
 
@@ -309,9 +348,9 @@ animation: salto 0.5s ease forwards;
 }
 
 .f2 {
-animation: movermariposa 1s linear infinite alternate;
+animation: moverscorpion 1s linear infinite alternate;
 }
-@keyframes movermariposa {
+@keyframes moverscorpion {
     0% { 
         transform: translateX(100px);
     }
@@ -321,10 +360,10 @@ animation: movermariposa 1s linear infinite alternate;
  }
 
  .f1 {
-animation: moverluciernaga 3s linear infinite alternate;
+animation: moversubzero 3s linear infinite alternate;
 }
 
- @keyframes moverluciernaga {
+ @keyframes moversubzero {
     0% { 
         transform: translateY(0px);
     }
