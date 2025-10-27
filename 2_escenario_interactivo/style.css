@@ -139,6 +139,8 @@ animation: moverluciernaga 3s linear infinite alternate;
         transform: translateY(300px);
     }
  }
+ 
+ 
 
  /* Swgundo Escenario */
 
@@ -371,3 +373,53 @@ animation: moversubzero 3s linear infinite alternate;
         transform: translateY(300px);
     }
  }
+
+/* Carrusel */
+
+ .flechas {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 0.5em 8em;
+    border-radius: 50%;
+}
+
+.flecha:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.flecha.izquierda {
+    left: 10px;
+}   
+
+.flecha.derecha {
+    right: 10px;
+}
+
+.Miniaturas {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+
+}
+
+.Miniatura {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.Miniatura:hover {
+    border-color: #fff;
+}
+.Miniatura.active {
+    border-color: #ff0;
+}
