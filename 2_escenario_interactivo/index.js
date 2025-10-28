@@ -74,7 +74,45 @@ lang.forEach( item => {
 
  });
 
-Reempezar.addEventListener('click', () => {
+Reempezar.addEventListener('click', () => { 
     count = 0
-    Points.textContent = `Resetear: ${count}` 
+    Points.textContent = `Reempezar: ${count}` 
      });
+// carrusel de escenas
+
+//varibales
+const escenas = document.querySelectorAll('.escena');
+const btnSiguiente = document.querySelector('.btn-siguiente');
+const btnAnterior = document.querySelector('.btn-anterior');
+const miniaturas = document.querySelectorAll('.miniatura');
+let indice = 0 
+
+console.log(escenas, btnSiguiente, btnAnterior, miniaturas);
+
+//funciones
+function mostrarEscena (i) {
+    for (let j = 0; j < escenas.length; j++) {
+        escenas[j].classList.remove('activa');
+        
+    }
+    escenas[i].classList.add('activa');
+
+    indice = i;
+
+};
+
+btnAnterior.addEventListener('click', function() {
+    indice = indice -1        
+    if (indice < 0) {
+        indice = escenas.length -1;
+    }
+    mostrarEscena(indice);
+});
+
+btnSiguiente.addEventListener('click', function() { 
+    indice = indice +1        
+    if (indice >= escenas.length) {
+        indice = 0;
+    }
+    mostrarEscena(indice);
+});
