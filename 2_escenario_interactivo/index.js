@@ -56,7 +56,7 @@ Resetear.addEventListener('click', () => {
 
 // escenario 3
 const lang = document.querySelectorAll('.lang');
-const Points = document.querySelector('.Points');
+const Points = document.querySelector('#Points');
 const Reempezar = document.querySelector('.Reempezar');
 
 let count = 0
@@ -69,14 +69,14 @@ lang.forEach( item => {
     item.style.filter = "grayscale(1)"
     item.classList.add('saltar')
     count++
-    Points.textContent = `Points: ${count}`
+    Points.textContent = `Puntos: ${count}`
 })
 
  });
 
 Reempezar.addEventListener('click', () => { 
     count = 0
-    Points.textContent = `Reempezar: ${count}` 
+    Points.textContent = `Puntos: ${count}` 
      });
 // carrusel de escenas
 
@@ -116,3 +116,13 @@ btnSiguiente.addEventListener('click', function() {
     }
     mostrarEscena(indice);
 });
+
+
+
+miniaturas.forEach(function(miniatura, i) {
+    miniatura.addEventListener('click', function() {
+        mostrarEscena(i);
+    });
+});
+
+mostrarEscena(0);
