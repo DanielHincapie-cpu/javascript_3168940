@@ -1,14 +1,98 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<script src="bd.json"></script>
-<script src="bd.js"></script>
-<script src="app.js"></script>    
+    <header role="banner">
+        <div class="header-inner">
+            <a href="netflixlogo.png" class="logo" aria-label="Ir al inicio">StreamFlix</a>
+            <nav role="navigation" aria-label="Menú principal">
+                <ul class="header-menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Series</a></li>
+                    <li><a href="#">Películas</a></li>
+                    <li><a href="#">Novedades populares</a></li>
+                    <li><a href="#">Mi lista</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-actions">
+                <a href="#" class="search" aria-label="buscar"></a>
+                <a href="#" class="profile" aria-label="perfil"></a>
+            </div>
+        </div>
+    </header>
+    <main role="main"> </main>
+    <section class="hero" aria-label="Contenido destacado">
+        <article class="featured" aria-labelledby="featured-title">
+            <div class="featured-media">
+                <img src="images/featured-poster.jpg" alt="Póster del título destacado" />
+            </div>
+            <div class="featured-info">
+                <h1 id="featured-title">Trama Vortex</h1>
+                <p class="overview">En este lugar encontraras toda la información que necesitas para saber sobre la vida de el cantante
+                    colombiano Rodolfo Aicardi.</p>
+                <div class="featured-actions">
+                    <a href="/watch/123" role="button" aria-label="Reproducir">Reproducir</a>
+                    <a href="/list/add/123" role="button" aria-label="Agregar a mi lista">+ Mi lista</a>
+                    <a href="/more/123" aria-label="Más información">Más información</a>
+                </div>
+                <ul class="meta" aria-hidden="false">
+                    <li>Capitulos: 3</li>
+                    <li>Año: 2025</li>
+                    <li>Calificación: 16+</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <section class="catalog">
+        <section class="row" aria-label="Populares en tu zona">
+            <h2>Capitulos</h2>
+            <ul class="row-items" role="list">
+                <li class="card" role="listitem" data-id="m1">
+                    <figure>
+                        <img src="images/poster-1.jpg" alt="Poster de Película 1" />
+                        <figcaption>
+                            <strong>Capitulo 1</strong>
+                            <span class="meta">2023 • 1h 45m</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="card" role="listitem" data-id="m2">
+                    <figure>
+                        <img src="images/poster-2.jpg" alt="Poster de Película 2" />
+                        <figcaption>
+                            <strong>Capitulo 2</strong>
+                            <span class="meta">2022 • 2h 10m</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="card" role="listitem" data-id="m3">
+                    <figure>
+                        <img src="images/poster-3.jpg" alt="Poster de Película 3" />
+                        <figcaption>
+                            <strong>Capitulo 3</strong>
+                            <span class="meta">2024 • 1h 30m</span>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+
+
+
+
+
+        <script src="bd.json"></script>
+        <script src="bd.js"></script>
+        <script src="app.js"></script>
 </body>
+
 </html>
