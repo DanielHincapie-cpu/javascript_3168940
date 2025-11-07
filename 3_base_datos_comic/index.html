@@ -1,17 +1,16 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    
 
     <header role="banner">
         <div class="header-inner">
-            <a href="netflixlogo.png" class="logo" aria-label="Ir al inicio">StreamFlix</a>
+            <a href="/" class="logo" aria-label="Ir al inicio">StreamFlix</a>
             <nav role="navigation" aria-label="Menú principal">
                 <ul class="header-menu">
                     <li><a href="#">Inicio</a></li>
@@ -36,7 +35,8 @@
             </div>
             <div class="featured-info">
                 <h1 id="featured-title">Trama Vortex</h1>
-                <p class="overview">En este lugar encontraras toda la información que necesitas para saber sobre la vida de el cantante
+                <p class="overview">En este lugar encontraras toda la información que necesitas para saber sobre la vida
+                    de el cantante
                     colombiano Rodolfo Aicardi.</p>
                 <div class="featured-actions">
                     <a href="/watch/123" role="button" aria-label="Reproducir">Reproducir</a>
@@ -85,14 +85,94 @@
             </ul>
         </section>
 
+        <section class="row" aria-label="Nuevas series">
+
+            <h2>Nuevas series</h2>
+            <ul class="row-items" role="list">
+                <li class="card" role="listitem" data-id="s1">
+                    <figure>
+                        <img src="images/series-1.jpg" alt="Poster de Serie 1" />
+                        <figcaption>
+                            <strong>Serie 1</strong>
+                            <span class="meta">Temporada 1</span>
+                        </figcaption>
+                    </figure>
+                </li>
+
+                <li class="card" role="listitem" data-id="s2">
+                    <figure>
+                        <img src="images/series-2.jpg" alt="Poster de Serie 2" />
+                        <figcaption>
+                            <strong>Serie 2</strong>
+                            <span class="meta">Temporada 4</span>
+                        </figcaption>
+                    </figure>
+                </li>
+
+
+                <li class="card" role="listitem" data-id="s3">
+                    <figure>
+                        <img src="images/series-3.jpg" alt="Poster de Serie 3" />
+                        <figcaption>
+                            <strong>Serie 3</strong>
+                            <span class="meta">Temporada 2</span>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
 
 
 
 
+        <section class="row" aria-label="Recomendadas para ti">
+            <h2>Recomendadas para ti</h2>
+            <ul class="row-items" role="list">
+                <li class="card" role="listitem" data-id="r1">
+                    <figure>
+                        <img src="images/reco-1.jpg" alt="Poster recomendado 1" />
+                        <figcaption>
+                            <strong>Recomendado 1</strong>
+                            <span class="meta">Drama • 2021</span>
+                        </figcaption>
+                    </figure>
+                </li>
 
-        <script src="bd.json"></script>
-        <script src="bd.js"></script>
-        <script src="app.js"></script>
+
+                <li class="card" role="listitem" data-id="r2">
+                    <figure>
+                        <img src="images/reco-2.jpg" alt="Poster recomendado 2" />
+                        <figcaption>
+                            <strong>Recomendado 2</strong>
+                            <span class="meta">Comedia • 2020</span>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+    </section>
+
+    </main>
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <nav aria-label="Enlaces de pie de página">
+                <ul>
+                    <li><a href="/ayuda">Centro de ayuda</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/privacidad">Privacidad</a></li>
+                    <li><a href="/terminos">Términos</a></li>
+                </ul>
+            </nav>
+
+            <p aria-hidden="false">© 2025 StreamFlix. Todas las marcas mencionadas son propiedad de sus respectivos
+                dueños.</p>
+        </div>
+    </footer>
+
+    <script src="bd.json"></script>
+    <script src="bd.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
