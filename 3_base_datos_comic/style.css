@@ -5,12 +5,14 @@
  }
 
  html,
- body {
+body {
      height: 100%;
      font-family: 'Arial', sans-serif;
      background-color: #f0f0f0;
      color: #333;
      line-height: 1.4;
+        overflow-x: hidden;
+    
  }
 
  header {
@@ -36,11 +38,11 @@
  }
 
  .logo {
-    color: #fff;
-    font-size: 1.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+     color: #fff;
+     font-size: 1.6rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
  }
 
  nav ul {
@@ -48,39 +50,186 @@
      display: flex;
      gap: 20px;
  }
+
+ nav a {
+     color: #fff;
+     text-decoration: none;
+     font-size: 0.95rem;
+     opacity: 0.9;
+     transition: opacity 0.2s ease;
+ }
+
+
+
+ nav a:hover {
+     opacity: 1;
+ }
+
+
+
+ .user-actions a {
+     color: #fff;
+     text-decoration: none;
+     margin-left: 1rem;
+     font-size: 0.9rem;
+     opacity: 0.9;
+ }
+
+
+
+ .user-actions a:hover {
+     opacity: 1;
+
+ }
+
+
+ .hero {
+     margin-top: 70px;
+     position: relative;
+     height: 70vh;
+     background: url('images/featured-banner.jpg') center/cover no-repeat;
+     display: flex;
+     align-items: flex-end;
+     justify-content: flex-start;
+     padding: 4rem 6%;
+ }
+
+
+
+ .hero::after {
+     content: '';
+     position: absolute;
+     inset: 0;
+     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+ }
+
+ .featured {
+     position: relative;
+     z-index: 2;
+     max-width: 700px;
+ }
+
+
+
+ .featured h1 {
+     font-size: 2.5rem;
+     margin-bottom: 1rem;
+ }
+
+ .featured p {
+     font-size: 1rem;
+     color: #ddd;
+     margin-bottom: 1.5rem;
+ }
+
+ .featured-actions a {
+     display: inline-block;
+     padding: 0.75rem 1.5rem;
+     margin-right: 0.5rem;
+     border-radius: 6px;
+     font-weight: 600;
+     text-decoration: none;
+     font-size: 0.95rem;
+ }
+
+
+ .featured-actions a[role="button"][aria-label="Reproducir"] {
+     background: #e50914;
+     color: #fff;
+ }
+
+ .featured-actions a[role="button"][aria-label="Reproducir"]:hover {
+     background: #f40612;
+ }
+
+ .featured-actions a[aria-label="Más información"],
+
+ .featured-actions a[role="button"][aria-label="Agregar a mi lista"] {
+     background: rgba(255, 255, 255, 0.2);
+     color: #fff;
+ }
+
+ .featured-actions a:hover {
+     background: rgba(255, 255, 255, 0.3);
+ }
+
+ .catalog {
+     margin-top: 2rem;
+     padding: 2rem 6%;
+ }
+
+
+ .row {
+    margin-bottom: 2rem;
+ }
+
+ .row h2 {
+     font-size: 1.3rem;
+     font-weight: 600;
+     margin-bottom: 1rem;
+ }
+
+
+ .row-items {
+     display: flex;
+     gap: 1rem;
+     overflow-x: auto;
+     scroll-behavior: smooth;
+     padding-bottom: 0.5rem;
+ }
+
+
+ .row-items::-webkit-scrollbar {
+     height: 8px;
+ }
+
+
+ .row-items::-webkit-scrollbar-thumb {
+     background: rgba(255, 255, 255, 0.2);
+     border-radius: 4px;
+ }
+
+
+
+ .card {
+     min-width: 160px;
+     flex: 0 0 auto;
+     background: #181818;
+     border-radius: 6px;
+     overflow: hidden;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+     cursor: pointer;
+ }
+
+
+
+ .card:hover {
+     transform: scale(1.05);
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+ }
+
+
+ .card img {
+     width: 100%;
+     height: 90px;
+     object-fit: cover;
+     display: block;
+ }
+
+
+
+ .card figcaption {
+     padding: 0.5rem;
+ }
+
+
+
+ .card strong {
+     display: block;
+     font-size: 0.9rem;
+     margin-bottom: 0.2rem;
+ }
+
+
+
  
-nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1rem;
-        transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-        color: #e50914;
-    }
-
-    main {
-        padding-top: 90px;
-        padding-bottom: 50px;
-        width: 95%;
-        max-width: 1300px;
-        margin: 0 auto;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px 0;
-        background-color: #222;
-        color: #fff;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    footer p {
-        margin: 0;
-        font-size: 0.9rem;
-    }
-
