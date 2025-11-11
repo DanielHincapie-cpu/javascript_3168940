@@ -11,8 +11,7 @@ body {
      background-color: #f0f0f0;
      color: #333;
      line-height: 1.4;
-        overflow-x: hidden;
-    
+    overflow-x: hidden;
  }
 
  header {
@@ -230,6 +229,84 @@ body {
      margin-bottom: 0.2rem;
  }
 
+card .meta {
+  font-size: 0.8rem;
+  color: #bbb;
+}
 
+
+footer {
+  padding: 2rem 6%;
+  background: #000;
+  color: #aaa;
+  font-size: 0.85rem;
+  width: 100%;
+    margin-top: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+footer a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+
+footer a:hover {
+  color: #fff;
+}
+
+
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  .hero {
+    height: 60vh;
+    padding: 2rem 4%;
+  }
+
+
+  .featured h1 {
+    font-size: 1.8rem;
+  }
+
+
+  .featured p {
+    font-size: 0.9rem;
+  }
+
+
+  .card {
+    min-width: 130px;
+  }
+}
 
  
