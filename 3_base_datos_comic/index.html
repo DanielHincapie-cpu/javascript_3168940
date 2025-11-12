@@ -1,159 +1,125 @@
-<html lang="en">
-<head>
+<!DOCTYPE html>
+<html lang="es"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trama Vortex</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Trama Vortex - Rodolfo Aicardi</title> <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-
     <header role="banner">
         <div class="header-inner">
-            <a href="/" class="logo" aria-label="Ir al inicio">TramaVortex</a>
+            <a href="/" class="logo" aria-label="Ir al inicio de TramaVortex">TramaVortex</a>
             <nav role="navigation" aria-label="Menú principal">
                 <ul class="header-menu">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Series</a></li>
-                    <li><a href="#">Películas</a></li>
-                    <li><a href="#">Novedades populares</a></li>
-                    <li><a href="#">Mi lista</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#series">Series</a></li>
+                    <li><a href="#peliculas">Películas</a></li>
+                    <li><a href="#novedades">Novedades y populares</a></li>
+                    <li><a href="#milista">Mi lista</a></li>
                 </ul>
             </nav>
 
             <div class="user-actions">
-                <a href="#" class="search" aria-label="buscar"></a>
-                <a href="#" class="profile" aria-label="perfil"></a>
+                <a href="/search" class="search" aria-label="Buscar contenido">
+
+</a> 
+                <a href="/profile" class="profile" aria-label="Ver perfil de usuario"></a>
             </div>
         </div>
     </header>
-    <main role="main"> </main>
-    <section class="hero" aria-label="Contenido destacado">
-        <article class="featured" aria-labelledby="featured-title">
-            <div class="featured-media">
-                <img src="portada.png" alt="Póster del título destacado" />
-            </div>
-            <div class="featured-info">
-                <h1 id="featured-title">Trama Vortex</h1>
-                <p class="overview">En este lugar encontraras toda la información que necesitas para saber sobre la vida
-                    de el cantante
-                    colombiano Rodolfo Aicardi.</p>
-                <div class="featured-actions">
-                    <a href="/watch/123" role="button" aria-label="Reproducir">Reproducir</a>
-                    <a href="/list/add/123" role="button" aria-label="Agregar a mi lista">+ Mi lista</a>
-                    <a href="/more/123" aria-label="Más información">Más información</a>
+    
+    <main role="main"> 
+        <section class="hero" aria-label="Contenido destacado">
+            <article class="featured" aria-labelledby="featured-title">
+                <div class="featured-media">
+                    <img src="portada.png" alt="Póster biográfico de Rodolfo Aicardi" />
                 </div>
-                <ul class="meta" aria-hidden="false">
-                    <li>Capitulos: 3</li>
-                    <li>Año: 2025</li>
-                    <li>Calificación: 16+</li>
+                <div class="featured-info">
+                    <h2 id="featured-title">Rodolfo Aicardi: Una Trayectoria</h2> 
+                    <p class="overview">En este lugar encontrarás toda la información que necesitas para saber sobre la vida
+                        y obra del cantante colombiano Rodolfo Aicardi, el rey de los diciembres.</p>
+                    <div class="featured-actions">
+                        <a href="/watch/123" role="button" class="play-button" aria-label="Reproducir tráiler o documental">Reproducir</a>
+                        <a href="/list/add/123" role="button" class="list-button" aria-label="Agregar a mi lista">+ Mi lista</a>
+                        <a href="/more/123" class="more-info-button" aria-label="Más información detallada">Más información</a>
+                    </div>
+                    <ul class="meta">
+                        <li>Capitulos: 3</li>
+                        <li>Año: 2025</li>
+                        <li>Clasificación: Documental / Biografía</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        
+        <section class="catalog">
+            <section class="row" aria-label="Episodios principales">
+                <h2>Episodios</h2>
+                <ul class="row-items" role="list">
+                    <li class="card" role="listitem" data-id="m1">
+                        <figure>
+                            <img src="images/poster-1.jpg" alt="Poster de Episodio 1: Los Inicios" />
+                            <figcaption>
+                                <strong>Capitulo 1</strong>
+                                <span class="meta">2025 • 50m</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="card" role="listitem" data-id="m2">
+                        <figure>
+                            <img src="images/poster-2.jpg" alt="Poster de Episodio 2: El Éxito Cumbiero" />
+                            <figcaption>
+                                <strong>Capitulo 2</strong>
+                                <span class="meta">2025 • 55m</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="card" role="listitem" data-id="m3">
+                        <figure>
+                            <img src="images/poster-3.jpg" alt="Poster de Episodio 3: El Legado" />
+                            <figcaption>
+                                <strong>Capitulo 3</strong>
+                                <span class="meta">2025 • 48m</span>
+                            </figcaption>
+                        </figure>
+                    </li>
                 </ul>
-            </div>
-        </article>
-    </section>
-    <section class="catalog">
-        <section class="row" aria-label="Populares en tu zona">
-            <h2>Capitulos</h2>
-            <ul class="row-items" role="list">
-                <li class="card" role="listitem" data-id="m1">
-                    <figure>
-                        <img src="images/poster-1.jpg" alt="Poster de Película 1" />
-                        <figcaption>
-                            <strong>Capitulo 1</strong>
-                            <span class="meta">2023 • 1h 45m</span>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="card" role="listitem" data-id="m2">
-                    <figure>
-                        <img src="images/poster-2.jpg" alt="Poster de Película 2" />
-                        <figcaption>
-                            <strong>Capitulo 2</strong>
-                            <span class="meta">2022 • 2h 10m</span>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="card" role="listitem" data-id="m3">
-                    <figure>
-                        <img src="images/poster-3.jpg" alt="Poster de Película 3" />
-                        <figcaption>
-                            <strong>Capitulo 3</strong>
-                            <span class="meta">2024 • 1h 30m</span>
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
+            </section>
+
+            <section class="row" aria-label="Contenido relacionado y otras series">
+                <h2>Personajes</h2>
+                <ul class="row-items" role="list">
+                    <li class="card" role="listitem" data-id="s1">
+                        <figure>
+                            <img src="images/series-1.jpg" alt="Poster de Serie Cumbia Clásica" />
+                            <figcaption>
+                                <strong>Rodolfo Aicardi</strong>
+                                <span class="meta">Temporada 1</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="card" role="listitem" data-id="s2">
+                        <figure>
+                            <img src="images/series-2.jpg" alt="Poster de Serie íconos Tropicales" />
+                            <figcaption>
+                                <strong>Mateo</strong>
+                                <span class="meta">Temporada 4</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="card" role="listitem" data-id="s3">
+                        <figure>
+                            <img src="images/series-3.jpg" alt="Poster de Serie Leyendas de la Música" />
+                            <figcaption>
+                                <strong>Abuela</strong>
+                                <span class="meta">Temporada 2</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
         </section>
-
-        <section class="row" aria-label="Nuevas series">
-
-            <h2>Nuevas series</h2>
-            <ul class="row-items" role="list">
-                <li class="card" role="listitem" data-id="s1">
-                    <figure>
-                        <img src="images/series-1.jpg" alt="Poster de Serie 1" />
-                        <figcaption>
-                            <strong>Serie 1</strong>
-                            <span class="meta">Temporada 1</span>
-                        </figcaption>
-                    </figure>
-                </li>
-
-                <li class="card" role="listitem" data-id="s2">
-                    <figure>
-                        <img src="images/series-2.jpg" alt="Poster de Serie 2" />
-                        <figcaption>
-                            <strong>Serie 2</strong>
-                            <span class="meta">Temporada 4</span>
-                        </figcaption>
-                    </figure>
-                </li>
-
-
-                <li class="card" role="listitem" data-id="s3">
-                    <figure>
-                        <img src="images/series-3.jpg" alt="Poster de Serie 3" />
-                        <figcaption>
-                            <strong>Serie 3</strong>
-                            <span class="meta">Temporada 2</span>
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </section>
-
-
-
-
-        <section class="row" aria-label="Recomendadas para ti">
-            <h2>Recomendadas para ti</h2>
-            <ul class="row-items" role="list">
-                <li class="card" role="listitem" data-id="r1">
-                    <figure>
-                        <img src="images/reco-1.jpg" alt="Poster recomendado 1" />
-                        <figcaption>
-                            <strong>Recomendado 1</strong>
-                            <span class="meta">Drama • 2021</span>
-                        </figcaption>
-                    </figure>
-                </li>
-
-
-                <li class="card" role="listitem" data-id="r2">
-                    <figure>
-                        <img src="images/reco-2.jpg" alt="Poster recomendado 2" />
-                        <figcaption>
-                            <strong>Recomendado 2</strong>
-                            <span class="meta">Comedia • 2020</span>
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </section>
-
-    </section>
-
     </main>
+
     <footer role="contentinfo">
         <div class="footer-inner">
             <nav aria-label="Enlaces de pie de página">
@@ -161,11 +127,10 @@
                     <li><a href="/ayuda">Centro de ayuda</a></li>
                     <li><a href="/contacto">Contacto</a></li>
                     <li><a href="/privacidad">Privacidad</a></li>
-                    <li><a href="/terminos">Términos</a></li>
+                    <li><a href="/terminos">Términos de uso</a></li>
                 </ul>
             </nav>
-
-            <p aria-hidden="false">© 2025 Trama Vortex.Todo en la pagina pertence a la pagina.</p>
+            <p>© 2025 Trama Vortex. Todos los derechos reservados. El contenido es propiedad de Trama Vortex.</p>
         </div>
     </footer>
 
