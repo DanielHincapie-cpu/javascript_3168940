@@ -4,7 +4,7 @@ let comic = {
   "genero": "Inspiración",
   "sinopsis": "Super tower",
   "autores": ["Juan Lopez", "Daniel Hincapié", "Juan Polo"],
-  "portadacomic": "images/portada.jpg",
+  "portadacomic": "./portada.jpg",
   "year": 2025,
   "capitulos": [
     {
