@@ -6,6 +6,25 @@ let comic = {
   "autores": ["Juan Lopez", "Daniel Hincapié", "Juan Polo"],
   "portadacomic": "./portada.jpg",
   "year": 2025,
+  "personajes": [
+    {
+      "nombre": "Rodolfo Aicardi",
+      "descripcion": "Protagonista principal, cuya vida y obra inspiran la narrativa del cómic.",
+      "imagen": "./img/perfil.jpg"
+    },
+
+    {
+      "nombre": "Mateo",
+      "descripcion": "personaje que continua el legado de Rodolfo Aicardi en la música.",
+      "imagen": "./img/perfil.jpg"
+    },
+
+    {
+      "nombre": "Abuela",
+      "descripcion": "Figura materna que influye en las decisiones de Rodolfo Aicardi.",
+      "imagen": "./img/perfil.jpg"
+    }
+],
   "capitulos": [
     {
         "id": 1,
