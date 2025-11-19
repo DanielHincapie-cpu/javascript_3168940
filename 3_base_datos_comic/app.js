@@ -25,3 +25,15 @@ hero.innerHTML = `
             </article>
 
 `
+console.log(row)
+
+
+
+comic.personajes.forEach( char => {
+    const div = document.createElement('div');
+    div.classList.add("personaje")
+    div.innerHTML = `
+        <img src="${char.imagen}" alt="personaje1">
+        <h3>${char.nombre}</h3>
+        <p> ${char.descripcion}</p>;`})
+cardpersonajes.appendChild(div);
