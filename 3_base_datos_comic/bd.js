@@ -1,28 +1,28 @@
 let comic = {
-  "nombrecomic": "Trama Vortex",
+  "nombrecomic": "Rodolfo Aicardi: Una Trayectoria",
   "numerocapitulos": 3,
-  "genero": "Inspiración",
-  "sinopsis": "Super tower",
+  "genero": "Documental / Biografía",
+  "sinopsis": "En este lugar encontrarás toda la información que necesitas...",
   "autores": ["Juan Lopez", "Daniel Hincapié", "Juan Polo"],
-  "portadacomic": "./portada.jpg",
+  "portadacomic": "./portada.png",
   "year": 2025,
   "personajes": [
     {
       "nombre": "Rodolfo Aicardi",
-      "descripcion": "Protagonista principal, cuya vida y obra inspiran la narrativa del cómic.",
-      "imagen": "./img/perfil.jpg"
+      "descripcion": "Protagonista principal, cuya vida y obra inspiran la narrativa.",
+      "imagen": "pwz 1.avif"
     },
 
     {
       "nombre": "Mateo",
-      "descripcion": "personaje que continua el legado de Rodolfo Aicardi en la música.",
-      "imagen": "./img/perfil.jpg"
+      "descripcion": "personaje que continúa el legado de Rodolfo Aicardi en la música.",
+      "imagen": "pez 2.jpeg" 
     },
 
     {
       "nombre": "Abuela",
       "descripcion": "Figura materna que influye en las decisiones de Rodolfo Aicardi.",
-      "imagen": "./img/perfil.jpg"
+      "imagen": "pez 3.avif" 
     }
 ],
   "capitulos": [
@@ -30,32 +30,22 @@ let comic = {
         "id": 1,
       "nombre": "El Nacimiento de un Eco Musical",
       "personajes": 29,
-      "portada": "Dan Jukes",
-      "descripcion": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+      "imagen": "./1.png",
+      "descripcion": ["Inicios en la música tropical"]
     },
     {
         "id": 2,
       "nombre": "El Alma detrás de la Voz Inmortal",
       "personajes": 39,
-      "portada": "Jane Wilson",
-      "descripcion": [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
-      ]
+      "imagen": "./2.png",
+      "descripcion": ["Auge de su carrera y éxitos decembrinos"]
     },
     {
         "id": 3,
       "nombre": "Un Legado que Resuena en el Presente",
       "personajes": 1000000,
-      "portada": "Unknown",
-      "descripcion": [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
-      ]
+      "imagen": "./3.png",
+      "descripcion": ["Análisis de su impacto musical y cultural"]
     }
   ]
 }
