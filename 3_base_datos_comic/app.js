@@ -10,7 +10,7 @@ if (hero && comic) {
     hero.innerHTML = `
         <article class="featured" aria-labelledby="featured-title">
             <div class="featured-media">
-                <img src="portada.png" alt="Póster biográfico de Rodolfo Aicardi" />
+                <img src="${comic.portadacomic}" alt="Póster biográfico de Rodolfo Aicardi" />
             </div>
             <div class="featured-info">
                 <h2 id="featured-title">${comic.nombrecomic}</h2> 
@@ -41,7 +41,7 @@ if (rowEpisodios && comic && comic.capitulos) {
 
         li.innerHTML = `
             <figure>
-                <img src="imagen ${cap.imagen}" alt="Poster de Episodio ${cap.id}: ${cap.nombre}" />
+                <img src="${cap.imagen}" alt="Poster de Episodio ${cap.id}: ${cap.nombre}" />
                 <figcaption>
                     <strong>Capítulo ${cap.id}: ${cap.nombre}</strong>
                     <span class="meta">${comic.year} • Aprox 50m</span>

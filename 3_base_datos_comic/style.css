@@ -93,13 +93,13 @@
  }
  
  main {
-    margin-top: 70px; 
+    margin-top: 0; 
  }
 
  .hero {
      position: relative;
-     min-height: 80vh; 
-     background: url('images/aicardi-banner.jpg') center/cover no-repeat; 
+     min-height:  calc(100vh - 70px); 
+     background: url('portada.png') center/cover no-repeat; 
      display: flex;
      align-items: flex-end;
      justify-content: flex-start;
@@ -319,6 +319,8 @@ footer p {
     color: #555;
 }
 
+
+
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: row; 
@@ -333,8 +335,8 @@ footer p {
     padding: 0; 
   }
   
-  main {
-      margin-top: 70px; 
+  main { 
+      margin-top: 0; 
   }
 
   nav ul {
@@ -343,13 +345,20 @@ footer p {
   
   .user-actions {
       align-self: center; 
+      margin-right: 0.5rem; 
   }
+  
 
   .hero {
-    min-height: 50vh;
+    min-height: calc(100vh - 70px); 
     padding: 2rem 4%;
+    align-items: flex-start; 
   }
-
+  
+  .featured {
+      max-width: 90%; 
+      margin-top: 2rem;
+  }
 
   .featured h2 {
     font-size: 2rem;
@@ -358,12 +367,7 @@ footer p {
 
   .featured p {
     font-size: 0.9rem;
-  }
-  
-  .featured-actions a {
-      font-size: 0.9rem;
-      padding: 0.6rem 1.2rem;
-      margin-right: 0.5rem;
+    margin-bottom: 1rem;
   }
   
   .featured-actions {
@@ -371,19 +375,54 @@ footer p {
       flex-wrap: wrap; 
       gap: 0.5rem;
   }
+
   .featured-actions a {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
       margin-right: 0;
   }
-
-
-  .card {
-    min-width: 150px;
-  }
   
+  .featured .meta {
+      flex-wrap: wrap; 
+      gap: 0.75rem; 
+      margin-top: 0.75rem;
+  }
+
+
   .catalog {
       padding: 1.5rem 4%;
   }
   
+  .row h2 {
+      font-size: 1.3rem; 
+      margin-bottom: 0.8rem;
+  }
+
+  .card {
+    min-width: 130px; 
+  }
+  
+  .card img {
+      height: 90px;
+  }
+  
+  .card strong {
+      font-size: 0.9rem;
+  }
+
+  .card .meta {
+      font-size: 0.75rem;
+  }
+  
+  .card:hover {
+       transform: scale(1.05); 
+  }
+
+  
+  footer {
+      padding: 2rem 4%;
+  }
+
   footer nav ul {
       gap: 1rem 0.75rem;
   }
