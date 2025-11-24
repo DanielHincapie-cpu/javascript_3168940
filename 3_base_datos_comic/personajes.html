@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Personaje - Plantilla Completa</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        .hero {
+            background: url('personaje_fondo.jpg') center/cover no-repeat; 
+            min-height: 100vh; 
+            padding-top: 70px; 
+            align-items: center; 
+        }
+        
+        .personal-info-container {
+            position: relative;
+            z-index: 2; 
+            padding: 3rem 6%;
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .personal-info {
+            background: rgba(34, 34, 34, 0.95);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .personal-info h3 {
+            color: #e50914;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            border-bottom: 2px solid rgba(229, 9, 20, 0.3);
+            padding-bottom: 0.75rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .info-item strong {
+            color: #ccc;
+            font-weight: 400;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+        
+        .info-item span {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                TramaVortex
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="capitulos.html">Capitulos</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="search" aria-label="buscar"></a>
+                <a href="#" class="profile" aria-label="perfil"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="featured">
+                
+                <h2 id="nombre-personaje">Rodolfo Aicardi</h2>
+                
+                <ul class="meta">
+                    <li> Medellín</li>
+                    <li> 1946 - 2007</li>
+                    <li> La Maestranza</li> 
+                </ul>
+                
+                <p id="descripcion-personaje">
+                    "Protagonista principal, cuya vida y obra inspiran la narrativa."
+                    <br><br>
+                si no tiene plata no se preocupe que es gratis y si no tiene quien le cuide los niños, tampoco poeque es para todas las edades.
+                </p>
+
+
+                <div class="personal-info">
+                    <h3>Información Personal y Origen</h3>
+                    <div class="info-grid">
+                        
+                        <div class="info-item">
+                            <strong>Identidad Real:</strong>
+                            <span>Marco Tulio Aicardi Rivera</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <strong>Lugar de Nacimiento:</strong>
+                            <span>Medellín 23 de mayo de 1946</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <strong>Ocupación:</strong>
+                            <span>Cantante y compositor</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <strong>lugar de su debut:</strong>
+                            <span>Medellín con el grupo Sexteto Miramar</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <strong>Afiliación Principal:</strong>
+                            <span>Los Hispanos</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <strong>Grandes Exitos</strong>
+                            <span>Colegiala, Cariñito, etc.</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <strong>Estatura/Peso:</strong>
+                            <span>[1,60m / indefinido kg]</span>
+                        </div>
+
+                        <div class="info-item">
+                            <strong>Primera Aparición:</strong>
+                            <span>Nacimiento de un eco músical</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog">
+            
+
+        </section>
+
+    </main>
+
+    <section>
+        <img src="portada.png" alt="Imagen de Rodolfo Aicardi">
+    </section>
+    
+
+    <footer>
+        <div class="footer-inner">
+            <nav>
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Términos de Uso</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </nav>
+            <p>
+                © 2025 TramaVortex. Los derechos de los personajes son propiedad de la misma pagina.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
