@@ -53,6 +53,24 @@
             margin: 0;
             color: #fff;
         }
+        .capitulo-video {
+            margin: 2rem 6%;
+            text-align: center;
+        }
+
+        .capitulo-video video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        @media screen and (max-width: 768px) {
+            .featured h2 {
+                font-size: 2.5rem; 
+            }   
+            
+        }
     </style>
 </head>
 <body>
@@ -83,7 +101,7 @@
                 
                 <p style="font-size: 1.5rem; color: #ccc; margin-bottom: 0.2rem;">La vida de Rodolfo Aicardi</p>
                 
-                <h2>[Título del Capítulo]</h2>
+                <h2>El nacimiendot de un eco músical</h2>
                 
                 <ul class="meta">
                     <li>30m</li>
@@ -126,7 +144,15 @@
             
         </section>
 
-        <video width="200" height="200" src="https://www.youtube.com/watch?v=8c9HJfRmC2M"></video>
+        <div class="capitulo-video">
+            <video controls>
+                <source src="istockphoto-1499163285-640_adpp_is.mp4" type="video/mp4">
+
+            </video>
+
+        </div>
+
+
         
 
     </main>
