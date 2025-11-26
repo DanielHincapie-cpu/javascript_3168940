@@ -1,4 +1,4 @@
-let comic = {
+export let comic = {
   "nombrecomic": "Rodolfo Aicardi: Una Trayectoria",
   "numerocapitulos": 3,
   "genero": "Documental / Biografía",
@@ -8,22 +8,26 @@ let comic = {
   "year": 2025,
   "personajes": [
     {
+      id: 1,
       "nombre": "Rodolfo Aicardi",
       "descripcion": "Protagonista principal, cuya vida y obra inspiran la narrativa.",
       "imagen": "pwz 1.avif"
     },
 
     {
+      id: 2,
       "nombre": "Mateo",
       "descripcion": "personaje que continúa el legado de Rodolfo Aicardi en la música.",
       "imagen": "pez 2.jpeg" 
     },
 
     {
+      id: 3,
       "nombre": "Abuela",
       "descripcion": "Figura materna que influye en las decisiones de Rodolfo Aicardi.",
       "imagen": "pez 3.avif" 
     }
+
 ],
   "capitulos": [
     {

@@ -1,3 +1,5 @@
+import { comic } from './bd.js';
+
 const hero = document.querySelector('.hero');
 const rowEpisodios = document.querySelector('.catalog .row:first-child .row-items'); 
 const cardpersonajes = document.querySelector('.catalog .row:last-child .row-items'); 
@@ -40,13 +42,14 @@ if (rowEpisodios && comic && comic.capitulos) {
         li.setAttribute('data-id', `e${cap.id}`); 
 
         li.innerHTML = `
+        <a href="./capitulo.html?id=${cap.id}"> 
             <figure>
                 <img src="${cap.imagen}" alt="Poster de Episodio ${cap.id}: ${cap.nombre}" />
                 <figcaption>
                     <strong>Capítulo ${cap.id}: ${cap.nombre}</strong>
                     <span class="meta">${comic.year} • Aprox 50m</span>
                 </figcaption>
-            </figure>
+            </figure> </a>
         `;
         
         rowEpisodios.appendChild(li);
@@ -62,13 +65,14 @@ if (cardpersonajes && comic && comic.personajes) {
         li.setAttribute('role', 'listitem');
         
         li.innerHTML = `
+        <a href="./personajes.html?id=${char.id}" </a>
             <figure>
                 <img src="${char.imagen}" alt="Imagen del personaje ${char.nombre}">
                 <figcaption>
                     <strong>${char.nombre}</strong>
                     <span class="meta">${char.descripcion}</span>
                 </figcaption>
-            </figure>
+            </figure </a>
         `;
         
         cardpersonajes.appendChild(li);
