@@ -42,7 +42,7 @@ if (rowEpisodios && comic && comic.capitulos) {
         li.setAttribute('data-id', `e${cap.id}`); 
 
         li.innerHTML = `
-        <a href="./capitulo.html?id=${cap.id}"> 
+        <a href="./capitulos.html?id=${cap.id}"> 
             <figure>
                 <img src="${cap.imagen}" alt="Poster de Episodio ${cap.id}: ${cap.nombre}" />
                 <figcaption>
