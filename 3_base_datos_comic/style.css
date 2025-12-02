@@ -12,6 +12,7 @@
      color: #fff; 
      line-height: 1.4;
      overflow-x: hidden;
+     animation: fade-effect 2s ease-in 0s 1 normal forwards;
  }
 
  header {
@@ -26,7 +27,7 @@
      justify-content: center;
      z-index: 10;
      backdrop-filter: blur(8px); 
-     border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+     border-bottom: 1px solid rgba(161, 9, 9, 0.05); 
  }
 
  
@@ -425,5 +426,14 @@ footer p {
 
   footer nav ul {
       gap: 1rem 0.75rem;
+  }
+}
+
+@keyframes fade-effect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
