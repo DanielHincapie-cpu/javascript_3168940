@@ -78,3 +78,52 @@ if (cardpersonajes && comic && comic.personajes) {
         cardpersonajes.appendChild(li);
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselInner = document.querySelector('.carousel-inner');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-control-prev');
+    const nextButton = document.querySelector('.carousel-control-next');
+    const totalItems = items.length;
+    let currentIndex = 0;
+
+    /**
+     * Mueve el carrusel al índice especificado.
+     * @param {number} index El índice del ítem al que moverse.
+     */
+    function moveTo(index) {
+        const offset = -index * 100; 
+        carouselInner.style.transform = `translateX(${offset}%)`;
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        let newIndex = (currentIndex + 1) % totalItems;
+        moveTo(newIndex);
+    }
+
+    function prevSlide() {
+        let newIndex = (currentIndex - 1 + totalItems) % totalItems;
+        moveTo(newIndex);
+    }
+
+    if (prevButton && nextButton) {
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    }
+
+
+    const intervalTime = 5000; 
+    let slideInterval = setInterval(nextSlide, intervalTime);
+
+    const heroSection = document.querySelector('.hero');
+    heroSection.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(nextSlide, intervalTime);
+    });
+    
+    moveTo(currentIndex);
+});
