@@ -108,6 +108,18 @@
      color: #fff;
  }
 
+    .bg1 {
+        background: url('1.png') center/cover no-repeat; 
+    }
+
+ .bg2 {
+    background: url('2.png') center/cover no-repeat; 
+ }
+
+    .bg3 {
+        background: url('3.png') center/cover no-repeat; 
+    }
+
  .hero::after {
      content: '';
      position: absolute;
