@@ -1,15 +1,15 @@
 
-//"configuración ESModules 2611"
-
 import { comic } from './bd.js';
 
 const params = new window.URLSearchParams(window.location.search)
 const id = parseInt ( params.get('id') )
 
-//comparar id de URl con id de la base de datos
+if (!id || !miPersonaje) {
+    window.location.href = 'index.html';
+}
+
 const miPersonaje = comic.personajes.find( p => p.id === id )
 
-//console.log("El personaje encontrado es:", miPersonaje);
 const containerPersonaje = document.querySelector('.contenido-personaje')
 console.log(containerPersonaje)
 containerPersonaje.innerHTML = `
@@ -91,4 +91,3 @@ containerPersonaje.innerHTML = `
 
     </main>
     `
-

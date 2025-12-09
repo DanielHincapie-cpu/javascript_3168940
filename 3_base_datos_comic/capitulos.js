@@ -2,11 +2,15 @@ import { comic } from "./bd.js";
 
 const params = new window.URLSearchParams(window.location.search);
 const id = parseInt(params.get('id'));
+console.log(id);
 
-//comparar id de URl con id de la base de datos
+
+
 const miCapitulo = comic.capitulos.find((c) => c.id === id);
 
-//console.log("El capítulo encontrado es:", miCapitulo);
+if (!id || !miCapitulo) {
+    window.location.href = 'index.html';
+}
 const containerCapitulo = document.querySelector('.contenido-capitulo');
 console.log(containerCapitulo);
 containerCapitulo.innerHTML = `

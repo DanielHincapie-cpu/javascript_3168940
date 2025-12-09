@@ -12,8 +12,53 @@
      color: #fff; 
      line-height: 1.4;
      overflow-x: hidden;
-     animation: fade-effect 2s ease-in 0s 1 normal forwards;
+     /* Animación de entrada inicial mínima */
+     opacity: 0;
+     animation: initialFadeIn 0.5s ease-out 0s 1 forwards;
  }
+
+ /* --- KEYFRAMES PERSONALIZADOS --- */
+
+ @keyframes initialFadeIn {
+    to {
+        opacity: 1;
+    }
+ }
+
+ @keyframes slideInLeft {
+     from {
+         transform: translateX(-100px);
+         opacity: 0;
+     }
+     to {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
+
+ @keyframes slideInRight {
+     from {
+         transform: translateX(100px);
+         opacity: 0;
+     }
+     to {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
+
+ @keyframes fadeInUp {
+     from {
+         transform: translateY(20px);
+         opacity: 0;
+     }
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ /* --- APLICACIÓN DE ANIMACIONES --- */
 
  header {
      position: fixed;
@@ -28,6 +73,8 @@
      z-index: 10;
      backdrop-filter: blur(8px); 
      border-bottom: 1px solid rgba(161, 9, 9, 0.05); 
+     /* Animación para el header */
+     animation: initialFadeIn 0.5s ease-out 0.2s 1 forwards;
  }
 
  
@@ -48,6 +95,9 @@
      display: flex;
      align-items: center;
      justify-content: center;
+     /* Animación para el logo */
+     opacity: 0;
+     animation: slideInLeft 0.6s ease-out 0.4s 1 forwards;
  }
 
  nav ul {
@@ -55,6 +105,18 @@
      display: flex;
      gap: 20px;
  }
+
+ /* Animación escalonada para los elementos del menú */
+ .header-menu li {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+ }
+ .header-menu li:nth-child(1) { animation-delay: 0.6s; }
+ .header-menu li:nth-child(2) { animation-delay: 0.7s; }
+ .header-menu li:nth-child(3) { animation-delay: 0.8s; }
+ .header-menu li:nth-child(4) { animation-delay: 0.9s; }
+ .header-menu li:nth-child(5) { animation-delay: 1.0s; }
+
 
  nav a {
      color: #e5e5e5;
@@ -74,9 +136,15 @@
      text-decoration: none;
      margin-left: 1.5rem; 
      font-size: 1.2rem; 
-     opacity: 0.8;
+     opacity: 0; /* Inicialmente oculto para la animación */
      transition: opacity 0.3s ease;
+     /* Animación para las acciones de usuario */
+     animation: slideInRight 0.6s ease-out forwards;
  }
+
+ /* Animación escalonada para los iconos de acción */
+ .user-actions a.search { animation-delay: 0.8s; }
+ .user-actions a.profile { animation-delay: 0.9s; }
 
  .user-actions a.search::before {
      content: '🔍';
@@ -138,16 +206,21 @@
     display: none; 
  }
 
+ /* Animación escalonada para el contenido destacado */
  .featured h2 {
      font-size: 3rem; 
      margin-bottom: 0.5rem;
      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+     opacity: 0;
+     animation: fadeInUp 0.8s ease-out 1.2s 1 forwards;
  }
 
  .featured p {
      font-size: 1.1rem;
      color: #fff;
      margin-bottom: 2rem;
+     opacity: 0;
+     animation: fadeInUp 0.8s ease-out 1.4s 1 forwards;
  }
 
  .featured-actions a {
@@ -160,12 +233,15 @@
      text-decoration: none;
      font-size: 1rem;
      transition: background-color 0.3s ease, color 0.3s ease;
+     opacity: 0;
+     animation: fadeInUp 0.6s ease-out forwards;
  }
 
 
  .featured-actions a.play-button {
      background: #fff;
      color: #000;
+     animation-delay: 1.6s;
  }
 
  .featured-actions a.play-button:hover {
@@ -176,6 +252,7 @@
  .featured-actions a.list-button {
      background: rgba(109, 109, 110, 0.7); 
      color: #fff;
+     animation-delay: 1.8s;
  }
 
  .featured-actions a.list-button:hover,
@@ -190,6 +267,8 @@
     margin-top: 1rem;
     font-size: 0.9rem;
     color: #ccc;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out 2.0s 1 forwards;
  }
 
  .catalog {
@@ -202,11 +281,14 @@
     margin-bottom: 3rem; 
  }
 
+ /* Animación para los títulos de sección */
  .row h2 {
      font-size: 1.5rem;
      font-weight: 700;
      margin-bottom: 1.2rem;
      color: #fff;
+     opacity: 0;
+     animation: fadeInUp 0.8s ease-out 0.2s 1 forwards; /* Se activa al inicio, pero idealmente se activaría al hacer scroll */
  }
 
 
@@ -243,7 +325,17 @@
      transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s;
      cursor: pointer;
      position: relative;
+     /* Animación escalonada para las tarjetas */
+     opacity: 0;
+     animation: fadeInUp 0.5s ease-out forwards;
  }
+
+ /* Animación escalonada para las primeras tarjetas (ejemplo) */
+ .row:nth-child(1) .card:nth-child(1) { animation-delay: 0.2s; }
+ .row:nth-child(1) .card:nth-child(2) { animation-delay: 0.3s; }
+ .row:nth-child(1) .card:nth-child(3) { animation-delay: 0.4s; }
+ .row:nth-child(2) .card:nth-child(1) { animation-delay: 0.2s; }
+ .row:nth-child(2) .card:nth-child(2) { animation-delay: 0.3s; }
 
  .card:hover {
      transform: scale(1.1); 
@@ -292,7 +384,9 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
-
+  /* Animación para el footer */
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
 }
 
 .footer-inner {
@@ -353,7 +447,7 @@ footer p {
     background-size: cover;
     background-position: center;
     position: absolute;
-    z-index: 1; /
+    z-index: 1; 
 }
 
 .carousel-image-1 {
@@ -517,11 +611,4 @@ footer p {
   }
 }
 
-@keyframes fade-effect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+/* ELIMINADA: @keyframes fade-effect */
