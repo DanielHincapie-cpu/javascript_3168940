@@ -4,11 +4,13 @@ import { comic } from './bd.js';
 const params = new window.URLSearchParams(window.location.search)
 const id = parseInt ( params.get('id') )
 
+
+
+const miPersonaje = comic.personajes.find( p => p.id === id )
+
 if (!id || !miPersonaje) {
     window.location.href = 'index.html';
 }
-
-const miPersonaje = comic.personajes.find( p => p.id === id )
 
 const containerPersonaje = document.querySelector('.contenido-personaje')
 console.log(containerPersonaje)

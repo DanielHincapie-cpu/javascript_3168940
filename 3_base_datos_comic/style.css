@@ -12,7 +12,7 @@
      color: #fff; 
      line-height: 1.4;
      overflow-x: hidden;
-     /* Animación de entrada inicial mínima */
+
      opacity: 0;
      animation: initialFadeIn 0.5s ease-out 0s 1 forwards;
  }
@@ -279,6 +279,8 @@
 
  .row {
     margin-bottom: 3rem; 
+    text-decoration: none;
+
  }
 
  /* Animación para los títulos de sección */
@@ -287,6 +289,7 @@
      font-weight: 700;
      margin-bottom: 1.2rem;
      color: #fff;
+     text-decoration: none;
      opacity: 0;
      animation: fadeInUp 0.8s ease-out 0.2s 1 forwards; /* Se activa al inicio, pero idealmente se activaría al hacer scroll */
  }
@@ -369,6 +372,10 @@
  .card .meta {
   font-size: 0.85rem;
   color: #aaa;
+}
+
+.card a {
+    text-decoration: none;
 }
 
 

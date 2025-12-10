@@ -97,6 +97,3 @@ if (cardpersonajes && comic && comic.personajes) {
     });
 }
 
-if (!id || !miPersonaje) {
-    window.location.href = 'index.html';
-}

@@ -33,21 +33,21 @@ export let comic = {
     {
         "id": 1,
       "nombre": "El Nacimiento de un Eco Musical",
-      "personajes": 29,
+      "personajes": 3,
       "imagen": "./1.png",
       "descripcion": ["Inicios en la música tropical"]
     },
     {
         "id": 2,
       "nombre": "El Alma detrás de la Voz Inmortal",
-      "personajes": 39,
+      "personajes": 3,
       "imagen": "./2.png",
       "descripcion": ["Auge de su carrera y éxitos decembrinos"]
     },
     {
         "id": 3,
       "nombre": "Un Legado que Resuena en el Presente",
-      "personajes": 1000000,
+      "personajes": 3,
       "imagen": "./3.png",
       "descripcion": ["Análisis de su impacto musical y cultural"]
     }
